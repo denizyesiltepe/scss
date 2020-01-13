@@ -1,0 +1,94 @@
+$grid-columns:12;
+$grid-gutter:30px;
+.row {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-gap: $grid-gutter;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-xs-#{$i} {
+        grid-column: span ($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+        grid-column: span ($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+        grid-column: span ($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+        grid-column: span ($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+        grid-column: span ($i);
+    }
+}
+
+@media (max-width: 576px) {
+    @for $i from 1 through $grid-columns {
+        .col-xs-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+    .hidden-xs {
+        display: none;
+    }
+}
+
+@media (min-width:576px) and (max-width: 768px) {
+    @for $i from 1 through $grid-columns {
+        .col-sm-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@media (min-width:768px) and (max-width: 992px) {
+    @for $i from 1 through $grid-columns {
+        .col-md-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1200px) {
+    @for $i from 1 through $grid-columns {
+        .col-lg-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+    .hidden-lg {
+        display: none;
+    }
+}
+
+@media (min-width:1200px) {
+    @for $i from 1 through $grid-columns {
+        .col-xl-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+    .hidden-xl {
+        display: none;
+    }
+}
